@@ -1,0 +1,21 @@
+{% extends "layout.html.twig" %}
+
+{% block fos_user_content %}
+    {{ include('bundles/FOSUserBundle/Security/login_content.html.twig') }}
+    <div id="token-login" token="{{ csrf_token }}"></div>
+
+    {% block body %}
+        <div id="login"></div>
+    {% endblock %}
+    {% block javascripts %}
+        <script>
+            var _token = document.getElementById('token-login').getAttribute('token');
+            console.log(_token);
+
+        </script>
+        {{ encore_entry_script_tags('login') }}
+    {% endblock %}
+
+{% endblock fos_user_content %}
+
+
