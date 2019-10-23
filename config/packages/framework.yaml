@@ -1,6 +1,8 @@
 framework:
     templating:
         engines: ['twig', 'php']
+    assets: ~
+#        json_manifest_path: '%kernel.root_dir%/../web/build/manifest.json'
     secret: '%env(APP_SECRET)%'
     #csrf_protection: true
     #http_method_override: true
