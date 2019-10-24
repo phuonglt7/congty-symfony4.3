@@ -22,6 +22,7 @@ class DefaultController extends AbstractController
      */
     public function index()
     {
+//        $this->denyAccessUnlessGranted('view');
         return $this->render('default/index.html.twig');
     }
 

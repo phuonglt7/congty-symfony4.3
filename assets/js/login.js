@@ -58,6 +58,10 @@ class Login extends Component{
         )
             .then(response => {
                 console.log(response);
+                alert(response.data.mess);
+                if (response.data.status == 200) {
+                    window.location.href = response.data.url;
+                }
 
             })
             .catch(error => {
