@@ -63,7 +63,7 @@ class SecurityController extends \FOS\UserBundle\Controller\SecurityController
     {
 
         if ($data['error'] && $data['error'] instanceof AuthenticationException ){
-            return new JsonResponse($data['error']->getMessage());
+            return new JsonResponse(["mess"=>$data['error']->getMessage()]);
         }
             return $this->render('bundles/FOSUserBundle/Security/login.html.twig', $data);
     }
