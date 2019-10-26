@@ -6,11 +6,13 @@ fos_user:
 fos_user_security_login:
   path: /login
   controller: App\Controller\SecurityController::loginAction
-
+  options:
+    expose: true
 fos_user_security_check:
   path: /login_check
   controller: App\Controller\SecurityController::loginAction
-
+  options:
+    expose: true
 demo:
   path:       /demo
   controller: App\Controller\SecurityController::demo

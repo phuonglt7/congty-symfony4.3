@@ -45,13 +45,17 @@ class Login extends Component{
         const {_username, _password} = this.state;
         const token = document.querySelector('meta[name="csrf-token"]');
         axios.post(
-            "http://127.0.0.1:8000/login_check",
+            "http://127.0.0.1:8000/auth",
             {
 
                     _csrf_token: _token,
                     _username: _username,
                     _password: _password
 
+            }, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
             },
             {withCredentials: true},
 
@@ -59,9 +63,9 @@ class Login extends Component{
             .then(response => {
                 console.log(response);
                 alert(response.data.mess);
-                if (response.data.status == 200) {
-                    window.location.href = response.data.url;
-                }
+                // if (response.data.status == 200) {
+                //     window.location.href = response.data.url;
+                // }
 
             })
             .catch(error => {

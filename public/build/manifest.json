@@ -1,0 +1,8 @@
+{
+  "build/app.js": "/build/app.js",
+  "build/login.js": "/build/login.js",
+  "build/runtime.js": "/build/runtime.js",
+  "build/vendors~app.js": "/build/vendors~app.js",
+  "build/vendors~app~login.js": "/build/vendors~app~login.js",
+  "build/vendors~login.js": "/build/vendors~login.js"
+}

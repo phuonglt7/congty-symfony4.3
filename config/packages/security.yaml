@@ -27,10 +27,15 @@ security:
         provider: fos_userbundle
         csrf_token_generator: security.csrf.token_manager
         login_path:     /login
-        use_forward:    false
+#        use_forward:    false
         check_path:     /login_check
-        failure_path:   null
+#        failure_path:   null
         success_handler: app.authentication_success_handler
+      json_login:
+        check_path:    /auth
+        username_path: _username
+        password_path: _password
+        provider: fos_userbundle
       #                default_target_path: /
 
       # activate different ways to authenticate
